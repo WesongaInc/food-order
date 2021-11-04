@@ -1,28 +1,28 @@
-<html>
-    <head>
-        <title>Food Ordering and Restaurant Booking System Admin Dashboard</title>
-        <link rel="stylesheet" href="../css/admin.css">
-    </head>
-
-    <body>
-        <h1>Admin Panel</h1>
-        <!-- Menu Section Starts --->
-        <div class="menu">
-            Menu
-        </div>
-        <!-- Menu Section Ends --->
+<?php $pageTitle = "Dashboard > Admin > Food Ordering and Restaurant Booking System"; include("partials/menu.php"); ?>
 
         <!-- Main Content Section Starts --->
         <div class="main-content">
-            Main Content
+        <div class="wrapper">
+            <h1>Dashboard</h1>
+            <div class="col-4 text-center">
+                <h1>5</h1><br>
+                Categories
+            </div>
+            <div class="col-4 text-center">
+                <h1>5</h1><br>
+                Categories
+            </div>
+            <div class="col-4 text-center">
+                <h1>5</h1><br>
+                Categories
+            </div>
+            <div class="col-4 text-center">
+                <h1>5</h1><br>
+                Categories
+            </div>
+            <div class="clearfix"></div>
+            </div>
         </div>
         <!-- Main Content Section Ends --->
 
-        <!-- Footer Section Starts --->
-        <div class="footer">
-            Footer
-        </div>
-        <!-- Footer Section Ends --->
-
-    </body>
-</html>
+<?php include('partials/footer.php') ?>
