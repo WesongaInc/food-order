@@ -28,26 +28,24 @@
                     <td>Shahriar Ahmed</td>
                     <td>shahriarahmed</td>
                     <td>
-                        Update Admin
-                        Delete Admin
+                    <a href="#" class="btn-primary">Update Admin</a>
+                        <a href="#" class="btn-danger">Delete Admin</a> 
                     </td>
-                </tr>
-                <tr>
+                </tr><tr>
                     <td>1.</td>
                     <td>Shahriar Ahmed</td>
                     <td>shahriarahmed</td>
                     <td>
-                        Update Admin
-                        Delete Admin
+                    <a href="#" class="btn-primary">Update Admin</a>
+                        <a href="#" class="btn-danger">Delete Admin</a> 
                     </td>
-                </tr>
-                <tr>
+                </tr><tr>
                     <td>1.</td>
                     <td>Shahriar Ahmed</td>
                     <td>shahriarahmed</td>
                     <td>
-                        Update Admin
-                        Delete Admin
+                    <a href="#" class="btn-primary">Update Admin</a>
+                        <a href="#" class="btn-danger">Delete Admin</a> 
                     </td>
                 </tr>
             </table>
