@@ -1,3 +1,6 @@
+        <!-- Database Connection Starts --->
+        <?php include('../config/constants.php'); ?>
+        <!-- Database Connection Ends --->
 <html>
     <head>
     <title>
@@ -29,3 +32,4 @@
             </div>
         </div>
         <!-- Menu Section Ends --->
+

@@ -43,9 +43,12 @@ table tr th{
 table tr td{
     padding: 1%;
 }
+.tbl-30{
+    width: 30%;
+}
 /* CSS for Button > Admin Section */
 .btn-primary{
-    background-color: #7bed9f;
+    background-color: #2ed573;
     padding: 1%;
     color: white;
     text-decoration: none;
@@ -53,7 +56,7 @@ table tr td{
     transition: 1s;
 }
 .btn-primary:hover{
-    background-color: #2ed573;
+    background-color: #7bed9f;
     color: black;
 }
 .btn-secondary{
@@ -69,7 +72,7 @@ table tr td{
     color: black;
 }
 .btn-danger{
-    background-color: #ff6b81;
+    background-color: #fd072c;
     padding: 1%;
     color: white;
     text-decoration: none;
@@ -80,6 +83,8 @@ table tr td{
     background-color: #ff4757;
     color: black;
 }
+
+
 /* CSS for Menu */
 .menu{
     background-color: #ced6e0;
@@ -126,3 +131,25 @@ table tr td{
     background-color: #ff4757;
     color: white;
 }
+.biddut a{
+    text-decoration:none;
+}
+/* unvisited link */
+.biddut a:link {
+    color: white;
+  }
+  
+  /* visited link */
+.biddut a:visited {
+    color: aquamarine;
+  }
+  
+  /* mouse over link */
+.biddut a:hover {
+    color: black;
+  }
+  
+  /* selected link */
+.biddut a:active {
+    color: yellow;
+  }
