@@ -9,12 +9,16 @@
         unset($_SESSION['add']); // Removing Session Message
     }
     if(isset($_SESSION['delete'])){
-        echo $_SESSION['delete']; // Displaying Session Message
-        unset($_SESSION['delete']); // Removing Session Message
+        echo $_SESSION['delete'];
+        unset($_SESSION['delete']);
     }
     if(isset($_SESSION['update'])){
-        echo $_SESSION['update']; // Displaying Session Message
-        unset($_SESSION['update']); // Removing Session Message
+        echo $_SESSION['update']; 
+        unset($_SESSION['update']);
+    }
+    if(isset($_SESSION['user-not-found'])){
+        echo $_SESSION['user-not-found']; 
+        unset($_SESSION['user-not-found']);
     }
 ?>
             <h1>Manage Admin</h1>
