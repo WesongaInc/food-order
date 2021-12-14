@@ -123,7 +123,7 @@ if(isset($_POST['submit']))
     }else{
         //Failed
         $_SESSION['add-cat'] = "<div class='btn-secondary text-center'> <br> Failed to add Category <br></div>";   
-        header("location:".SITEURL.'admin/add-category.php');
+        header("location:".SITEURL.'admin/manage-category.php');
     }
 
 }
