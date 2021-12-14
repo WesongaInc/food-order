@@ -1,5 +1,4 @@
-<?php include('partials/menu.php'); ?>
-<?php include('partials/required.php'); ?>
+<?php $pageTitle = "Admin > Change Password > Food Ordering and Restaurant Booking System"; include("partials/menu.php"); ?>
 
 <div class="main-content">
     <div class="wrapper">

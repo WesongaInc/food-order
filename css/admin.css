@@ -165,3 +165,18 @@ table tr td{
 .biddut a:active {
     color: yellow;
   }
+
+/* CSS for Login */
+.login{
+    width: 25%;
+    border: 2px solid gray;
+    margin: 15% auto;
+    padding: 2%;
+}
+.midtable{
+    margin: 0 auto;
+    padding: 5%;
+}
+.midtable tr td{
+    margin: 2%;
+}

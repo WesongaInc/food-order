@@ -27,6 +27,7 @@
                 <li><a href="../admin/manage-category.php">Category</a></li>
                 <li><a href="../admin/manage-food.php">Food</a></li>
                 <li><a href="../admin/manage-order.php">Order</a></li>
+                <li><a href="../admin/logout.php">LogOut</a></li>
 
             </ul>
             </div>
