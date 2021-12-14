@@ -1,14 +1,15 @@
 <?php
     //Include Constants.php file here fore database connection
     include('../config/constants.php');
+    include('../admin/partials/login-check.php'); 
+    ?>
+    <?php 
     //Check Whether the id and image_name value is set or not
     if(isset($_GET['id']) AND isset($_GET['image_name']))
     {
         $id = $_GET['id'];
         $image_name = $_GET['image_name'];
-        echo $id ;
-        echo $image_name;
-
+        
         //Remove the physical image file
         if($image_name!=""){
             //Image is available and remove it
@@ -44,6 +45,5 @@
         //2.2.2: Redirect to Manage Admin Page
         header('location:'.SITEURL.'admin/manage-category.php');
     }
-    
- 
+
 ?>

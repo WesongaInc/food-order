@@ -78,25 +78,29 @@ if(isset($_POST['submit']))
         //Upload the image 
         //To upload the image we need image name , source path and destination path
         $image_name = $_FILES['image']['name'];
-        //Auto rename image to avoid replace having the same image name
-        //Get the extension of the image e.g. food1.png
-        $ext = end(explode('.',$image_name));
-        //Rename the image
-        $image_name = "Food_Category_".rand(000,999).'.'.$ext; //Renamed to -> Food_Category_001.png
-        $source_path = $_FILES['image']['tmp_name'];
-        $destination_path = "../images/category/".$image_name;
 
-        //Finally upload the image
-        $upload = move_uploaded_file($source_path,$destination_path);
-        //Check whether the image is uploaded or not
-        // If the image is not uploaded then we will stop the process and redirect with error message
-        if($upload==false){
-            //Set message
-            $_SESSION['upload'] = "<div class='btn-secondary text-center'> <br> Failed to upload image<br></div>";   
-            header("location:".SITEURL.'admin/add-category.php');
-            //Stop the process
-            die();
-        }
+        //Upload image only if image is selected
+        if($image_name!=""){
+            //Auto rename image to avoid replace having the same image name
+            //Get the extension of the image e.g. food1.png
+            $ext = end(explode('.',$image_name));
+            //Rename the image
+            $image_name = "Food_Category_".rand(000,999).'.'.$ext; //Renamed to -> Food_Category_001.png
+            $source_path = $_FILES['image']['tmp_name'];
+            $destination_path = "../images/category/".$image_name;
+
+            //Finally upload the image
+            $upload = move_uploaded_file($source_path,$destination_path);
+            //Check whether the image is uploaded or not
+            // If the image is not uploaded then we will stop the process and redirect with error message
+            if($upload==false){
+                //Set message
+                $_SESSION['upload'] = "<div class='btn-secondary text-center'> <br> Failed to upload image<br></div>";   
+                header("location:".SITEURL.'admin/add-category.php');
+                //Stop the process
+                die();
+            }
+        }    
         
     }else{
         //Don't upload the image and set the image name as blank

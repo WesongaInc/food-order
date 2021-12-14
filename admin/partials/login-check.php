@@ -8,5 +8,6 @@
             $_SESSION['no-login-message'] = "<div class='btn-danger text-center'> Please login to Access Control</div>";
             //Redirect
             header('location:'.SITEURL.'admin/login.php');
+            die();
         }
             ?>

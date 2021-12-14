@@ -1,6 +1,9 @@
 <?php
     //Include Constants.php file here fore database connection
     include('../config/constants.php');
+    include('../admin/partials/login-check.php'); 
+    ?>
+    <?php 
     
     //1.Get the ID if Admin to be deleted
      $id = $_GET['id'];
