@@ -12,25 +12,32 @@
     <div class="login">
         <h1 class="text-center">Login</h1>
         <br>
-        <?php if(isset($_SESSION['login']))
+        <?php 
+        if(isset($_SESSION['login']))
         {
             echo $_SESSION['login'];
             unset($_SESSION['login']);
-        } ?> <br>
+        }
+        if(isset($_SESSION['no-login-message']))
+        {
+            echo $_SESSION['no-login-message'];
+            unset($_SESSION['no-login-message']);
+        }
+         ?> <br>
         <!-- Login Form Starts here -->
         <form action="" method="post">
             <table class="midtable">
                 <tr>
                     <td>
                     Username :  <br>
-                    <input type="text" name="username" placeholder="Enter Username">
+                    <input type="text" name="username" placeholder="Enter Username" required>
                     </td>
                 </tr>
                 <tr>
                     <td>
                     Password : 
                     <br>
-                    <input type="password" name="password" placeholder="Enter Password">
+                    <input type="password" name="password" placeholder="Enter Password" required>
                     </td>
                 </tr>
                 <tr><td>
@@ -61,7 +68,9 @@
         $count = mysqli_num_rows($res);
         if($count==1){
             //User Available and Login Success
-            $_SESSION['login']="<div class='btn-primary text-center'>Login Successful</div>";
+            $_SESSION['user'] = $username; // to check whether the user is logged in or not and logout will unset
+            $_SESSION['login']="<div class='btn-primary text-center'>Login Successful $username</div>";
+            
         header("location:".SITEURL.'admin/index.php');
         }else{
             //User NOT Available and Login Fail

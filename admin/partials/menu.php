@@ -1,6 +1,10 @@
         <!-- Database Connection Starts --->
         <?php include('../config/constants.php'); ?>
         <!-- Database Connection Ends --->
+        <!-- Authorization Check Starts --->
+        <?php include('login-check.php'); ?>
+        <!-- Authorization Check Ends --->
+        
 <html>
     <head>
     <title>
@@ -27,7 +31,9 @@
                 <li><a href="../admin/manage-category.php">Category</a></li>
                 <li><a href="../admin/manage-food.php">Food</a></li>
                 <li><a href="../admin/manage-order.php">Order</a></li>
+                <li class="btn-primary"><a href="../admin/index.php"><?php echo $_SESSION['user']; ?></a></li>
                 <li><a href="../admin/logout.php">LogOut</a></li>
+
 
             </ul>
             </div>
