@@ -14,6 +14,16 @@
             echo $_SESSION['upload'];
             unset($_SESSION['upload']);
         }
+        if(isset($_SESSION['delete']))
+        {
+            echo $_SESSION['delete'];
+            unset($_SESSION['delete']);
+        }
+        if(isset($_SESSION['update']))
+        {
+            echo $_SESSION['update'];
+            unset($_SESSION['update']);
+        }
          ?>
         <!-- Button to Add Admin Starts-->
     <br><a href="<?php echo SITEURL;?>admin/add-food.php" class="btn-secondary">Add Food</a> <br><br>
