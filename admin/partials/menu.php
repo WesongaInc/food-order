@@ -27,6 +27,7 @@
             <div class="wrapper">
             <ul>
                 <li><a href="../admin/index.php">Dashboard</a></li>
+                <li><a href="<?php echo SITEURL; ?>">Visit Website</a></li>
                 <li><a href="../admin/manage-admin.php">Admin</a></li>
                 <li><a href="../admin/manage-category.php">Category</a></li>
                 <li><a href="../admin/manage-food.php">Food</a></li>

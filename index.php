@@ -18,29 +18,48 @@
         <div class="container">
             <h2 class="text-center">Explore Foods</h2>
 
-            <a href="category-foods.html">
+            
+<?php 
+//SQL query to display category from database
+    $sql = "SELECT * FROM tbl_category WHERE active='Yes' AND featured='Yes' LIMIT 3";
+    $res = mysqli_query($conn,$sql);
+    $count = mysqli_num_rows($res);
+    if($count>0){
+        while($row=mysqli_fetch_assoc($res)){
+            //Get the values
+            $id = $row['id'];
+            $title = $row['title'];
+            $image_name = $row['image_name'];
+            ?>
+            <a href="category-foods.php">
             <div class="box-3 float-container">
-                <img src="images/pizza.jpg" alt="Pizza" class="img-responsive img-curve">
+            <?php 
+            // Check whether image_name(the image) is available or not
+            if($image_name!=""){
+                //Display image
+                ?>
+                <img src="<?php echo SITEURL; ?>/images/category/<?php echo $image_name; ?>" alt="<?php echo $title; ?>" class="img-responsive img-curve" width="100%" height="300px">
+                <?php
+            }
+            else{
+                //Display message
+                echo "<div class='btn-secondary'>No Image Available</div>";
+            }
+            ?>
+                
 
-                <h3 class="float-text text-white">Pizza</h3>
+                <h3 class="float-text text-white"><?php echo $title; ?></h3>
             </div>
             </a>
+            <?php
+        }
 
-            <a href="#">
-            <div class="box-3 float-container">
-                <img src="images/burger.jpg" alt="Burger" class="img-responsive img-curve">
-
-                <h3 class="float-text text-white">Burger</h3>
-            </div>
-            </a>
-
-            <a href="#">
-            <div class="box-3 float-container">
-                <img src="images/momo.jpg" alt="Momo" class="img-responsive img-curve">
-
-                <h3 class="float-text text-white">Momo</h3>
-            </div>
-            </a>
+    }else{
+        ?>
+        <div class="btn-secondary">No Category Available</div>
+        <?php 
+    }
+?>
 
             <div class="clearfix"></div>
         </div>
